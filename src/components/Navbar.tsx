@@ -96,7 +96,7 @@ export function Navbar() {
       <button
         onClick={toggleTheme}
         aria-label={isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
-        className="w-8 h-8 rounded-md border border-border bg-transparent text-muted-foreground hover:border-primary hover:text-primary flex items-center justify-center transition-colors"
+        className="flex h-8 w-8 items-center justify-center rounded-md border border-white/20 bg-transparent text-white/70 transition-colors hover:border-primary hover:text-primary"
       >
         {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
       </button>
@@ -105,10 +105,8 @@ export function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-40 w-full border-b transition-colors duration-300 ${
-        scrolled
-          ? "border-border bg-background/95 backdrop-blur-md shadow-sm"
-          : "border-transparent bg-background/80 backdrop-blur-sm"
+      className={`on-dark sticky top-0 z-40 w-full border-b bg-hero text-white transition-shadow duration-300 ${
+        scrolled ? "border-white/10 shadow-lg shadow-black/20" : "border-white/[0.06]"
       }`}
     >
       <NavigationMenu className="mx-auto">
@@ -132,7 +130,7 @@ export function Navbar() {
           <span className="flex md:hidden items-center gap-2">
             <ThemeToggle />
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
-              <SheetTrigger className="px-2 text-foreground">
+              <SheetTrigger className="px-2 text-white">
                 <Menu className="h-6 w-6">
                   <span className="sr-only">Menú</span>
                 </Menu>
@@ -188,8 +186,8 @@ export function Navbar() {
                   e.preventDefault();
                   scrollToSection(route.id);
                 }}
-                className={`relative text-[14px] tracking-wide font-medium ${buttonVariants({ variant: "ghost" })} text-muted-foreground hover:text-foreground transition-colors ${
-                  active === route.id ? "text-foreground font-semibold" : ""
+                className={`relative text-[14px] tracking-wide font-medium ${buttonVariants({ variant: "ghost" })} text-white/60 transition-colors hover:bg-white/5 hover:text-white ${
+                  active === route.id ? "font-semibold text-white" : ""
                 }`}
               >
                 {route.label}
