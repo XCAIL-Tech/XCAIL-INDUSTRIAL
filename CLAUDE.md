@@ -25,7 +25,7 @@ Deploy: Vercel (auto en push a `main`). Ver `DEPLOY.md`.
 - **Stack:** Vite 5 + React 18 + TS strict + Tailwind 3 + shadcn/ui + react-router-dom 7. SPA pura, sin SSR.
 - **Español únicamente.** Todo el copy vive en `src/lib/i18n.tsx` (`useI18n().tr`). No hardcodear textos en los componentes.
 - **Path alias:** `@/` → `src/`.
-- **Tema:** claro por defecto. `useTheme` (en `src/hooks/`) togglea la clase `dark` y persiste en `localStorage`. Usar siempre tokens (`bg-card`, `text-muted-foreground`, `border-border`, `text-primary`…), nunca colores hardcodeados, así el modo oscuro sigue funcionando.
+- **Tema:** oscuro único. `<html class="dark">` fijo en `index.html`, sin toggle. Igual usar tokens (`bg-card`, `text-muted-foreground`, `border-border`, `text-primary`…) — resuelven contra la paleta `.dark` de `App.css`.
 - **Design tokens:** en `src/App.css` (`:root` claro / `.dark` oscuro). Paleta: grafito + **azul petróleo** (`--primary` ≈ `#1B5866`) + **cobre como chispa secundaria** (`--secondary` ≈ `#B85B3B`, usar poco: números, hovers, acentos). Franjas oscuras usan `.panel-dark` + `.blueprint-grid` y el wrapper `.on-dark`.
 - **Tipografía:** `font-display` = Space Grotesk (títulos, todos los `h1..h4` ya la toman por CSS base), `font-mono` = JetBrains Mono (eyebrows, labels, specs, números — clase `.eyebrow` / `.spec`), body = Outfit.
 - **Superficies:** `.panel` / `.panel-hover` (cards claras con sombra), `.panel-dark` (grafito sobre fondo claro), `.btn-primary` (petróleo) / `.btn-line` (contorno), `.duotone-wrap` (fotos con tratamiento duotono vía `DuotoneImage`).

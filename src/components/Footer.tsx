@@ -6,7 +6,7 @@ export function Footer() {
 
   return (
     <footer className="on-dark border-t border-white/10 bg-hero text-white">
-      <div className="container py-14">
+      <div className="container pb-0 pt-14">
         <div className="mb-10 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 md:grid-cols-4">
           {/* Marca */}
           <div className="flex flex-col gap-3">
@@ -84,7 +84,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex justify-center border-t border-white/10 pt-6">
+        <div className="flex justify-center border-t border-white/10 py-7">
           <p className="text-center text-xs text-white/45">
             © {new Date().getFullYear()} XCAIL Industrial · {f.rights}
           </p>
