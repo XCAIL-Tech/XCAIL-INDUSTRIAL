@@ -19,15 +19,12 @@ export function Footer() {
             </a>
             <p className="text-[10.5px] leading-snug text-white/45">{f.unit}</p>
             <p className="max-w-xs text-sm leading-relaxed text-white/60">{f.tagline}</p>
-            <div className="mt-2 space-y-1">
-              <p className="text-sm text-white/55">{f.location}</p>
-              <a
-                href={`mailto:${f.email}`}
-                className="block text-sm text-white/55 transition-colors hover:text-primary"
-              >
-                {f.email}
-              </a>
-            </div>
+            <a
+              href={`mailto:${f.email}`}
+              className="text-sm text-white/55 transition-colors hover:text-primary"
+            >
+              {f.email}
+            </a>
           </div>
 
           {/* Servicios */}
@@ -80,6 +77,7 @@ export function Footer() {
                   </a>
                 </li>
               ))}
+              <li className="text-sm text-white/55">{f.location}</li>
             </ul>
           </div>
         </div>
