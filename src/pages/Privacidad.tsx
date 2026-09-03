@@ -113,11 +113,10 @@ export default function Privacidad() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="text-xl font-semibold text-foreground">8. Cookies y almacenamiento local</h2>
+            <h2 className="text-xl font-semibold text-foreground">8. Cookies</h2>
             <p>
-              Este sitio utiliza almacenamiento local del navegador (localStorage) únicamente para
-              recordar tu preferencia de tema visual (claro/oscuro). No utilizamos cookies de
-              rastreo publicitario ni de terceros con fines de perfilado.
+              Este sitio no utiliza cookies de rastreo publicitario ni de terceros con fines de
+              perfilado.
             </p>
           </section>
 

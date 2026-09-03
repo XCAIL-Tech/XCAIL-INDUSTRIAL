@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, Sun, Moon, ArrowRight } from "lucide-react";
-import { useTheme } from "@/hooks/useTheme";
+import { Menu, ArrowRight } from "lucide-react";
 import { buttonVariants } from "./ui/button";
 import {
   Sheet,
@@ -75,7 +74,6 @@ export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const { tr } = useI18n();
   const active = useActiveSection();
-  const { isDark, toggle: toggleTheme } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -90,18 +88,6 @@ export function Navbar() {
     { id: "empresa", label: tr.navbar.empresa },
     { id: "contacto", label: tr.navbar.contacto },
   ];
-
-  function ThemeToggle() {
-    return (
-      <button
-        onClick={toggleTheme}
-        aria-label={isDark ? "Cambiar a modo claro" : "Cambiar a modo oscuro"}
-        className="flex h-8 w-8 items-center justify-center rounded-md border border-white/20 bg-transparent text-white/70 transition-colors hover:border-primary hover:text-primary"
-      >
-        {isDark ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-      </button>
-    );
-  }
 
   return (
     <header
@@ -128,7 +114,6 @@ export function Navbar() {
 
           {/* Mobile */}
           <span className="flex md:hidden items-center gap-2">
-            <ThemeToggle />
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger className="px-2 text-white">
                 <Menu className="h-6 w-6">
@@ -198,9 +183,8 @@ export function Navbar() {
             ))}
           </nav>
 
-          {/* Desktop: CTA + theme toggle */}
+          {/* Desktop: CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <ThemeToggle />
             <a
               href={PATH_MAP.contacto}
               onClick={(e) => {
