@@ -21,7 +21,7 @@ const es = {
   hero: {
     h1: "Producción que se adapta a tu operación.",
     subheadline:
-      "Servicios de acondicionamiento, ensamblado, envasado y packaging para empresas.",
+      "Soluciones de acondicionamiento, ensamblado, envasado y packaging para empresas.",
     cta_primary: "Solicitar evaluación",
     cta_secondary: "Conocer nuestros servicios",
   },
@@ -35,7 +35,6 @@ const es = {
       "Armado",
       "Etiquetado",
       "Preparación de kits",
-      "Producción",
     ],
   },
 
@@ -45,27 +44,33 @@ const es = {
     items: [
       {
         title: "Envasado y preparación",
-        desc: "Procesos de envasado, dosificado y preparación adaptados al producto y al volumen requerido.",
+        desc: "Procesos de envasado y preparación adaptados a las características del producto, presentación y volumen requerido.",
+        tags: ["Preparación", "Envasado", "Presentación", "Control"],
       },
       {
         title: "Packaging y terminación",
         desc: "Armado, preparación y terminación de presentaciones comerciales listas para distribución.",
+        tags: ["Armado de packaging", "Inserción", "Cierre", "Terminación"],
       },
       {
         title: "Acondicionamiento y etiquetado",
         desc: "Clasificación, control, etiquetado y acondicionamiento de productos según especificación.",
+        tags: ["Etiquetado", "Clasificación", "Control visual", "Reacondicionamiento"],
       },
       {
         title: "Ensamblado",
-        desc: "Montaje manual —y progresivamente semiautomático— de componentes y conjuntos.",
+        desc: "Montaje, integración y preparación de componentes y conjuntos según los requerimientos de cada proyecto.",
+        tags: ["Montaje", "Integración", "Verificación", "Preparación"],
       },
       {
         title: "Armado y preparación de kits",
-        desc: "Procesos manuales, integración de componentes y preparación de kits o sets.",
+        desc: "Integración de componentes, armado de conjuntos y preparación de kits o sets según especificación.",
+        tags: ["Kitting", "Sets", "Combos", "Inserción de componentes"],
       },
       {
-        title: "Operaciones especiales",
-        desc: "Evaluación de procesos particulares que una empresa necesite externalizar total o parcialmente.",
+        title: "Procesos a medida",
+        desc: "¿Tu operación no encaja en una categoría? Evaluamos procesos manuales, de acondicionamiento, armado o preparación que puedan externalizarse total o parcialmente.",
+        tags: ["A medida", "Total o parcial", "Evaluación"],
       },
     ],
   },
@@ -73,6 +78,7 @@ const es = {
   outsourcing: {
     title: "¿Necesitás tercerizar parte de tu producción?",
     body: "Analizamos procesos productivos y operaciones que puedan externalizarse, considerando volumen, materiales, logística y requerimientos específicos de cada proyecto.",
+    body2: "Cada proyecto se evalúa individualmente antes de definir su modalidad operativa.",
     cta: "Solicitar evaluación",
   },
 
@@ -84,28 +90,31 @@ const es = {
       { step: "01", title: "Relevamiento", desc: "Conocemos el producto, el proceso, el volumen y los requerimientos de calidad." },
       { step: "02", title: "Evaluación", desc: "Analizamos recursos, infraestructura, tiempos y modalidad operativa necesarios." },
       { step: "03", title: "Propuesta", desc: "Definimos alcance, capacidad, costos y condiciones del proyecto." },
-      { step: "04", title: "Producción", desc: "Implementamos el proceso acordado y acompañamos su continuidad y escalamiento." },
+      { step: "04", title: "Implementación", desc: "Ponemos en marcha el proceso acordado y acompañamos su producción, continuidad y escalamiento." },
     ],
   },
 
   why: {
     title: "Por qué XCAIL Industrial",
-    subtitle: "Atributos concretos, sin métricas infladas.",
+    subtitle: "Una operación flexible, construida alrededor de las necesidades de cada proyecto.",
     items: [
       { title: "Flexibilidad operativa", desc: "Procesos definidos según las necesidades de cada producción, no un formato único." },
       { title: "Evaluación personalizada", desc: "Cada proyecto se analiza antes de establecer su operación, alcance y costos." },
-      { title: "Experiencia productiva", desc: "Equipo con experiencia práctica en producción, envasado, logística y operaciones." },
-      { title: "Respaldo empresarial", desc: "XCAIL Industrial forma parte de XCAIL Technologies S.A.S." },
-      { title: "Tecnología aplicada", desc: "Posibilidad de integrar electrónica, software y automatización de forma progresiva." },
+      { title: "Experiencia productiva", desc: "Equipo con experiencia en producción, envasado, operaciones, logística y manejo de procesos productivos." },
+      { title: "Respaldo XCAIL", desc: "Una unidad de XCAIL Technologies S.A.S., con estructura empresarial, tecnológica y de gestión existente." },
+      { title: "Tecnología aplicada", desc: "Capacidad para incorporar progresivamente tecnología, electrónica y herramientas de control según las necesidades de cada proyecto." },
       { title: "Escalabilidad", desc: "Procesos diseñados para evolucionar según volumen y continuidad." },
     ],
   },
 
   industryTech: {
     title: "Industria + Tecnología",
-    lead: "Una unidad industrial respaldada por una empresa tecnológica.",
-    body: "XCAIL Industrial suma la capacidad tecnológica de XCAIL Technologies a las operaciones productivas: la posibilidad de integrar automatización, control y electrónica a cada proceso, según lo que necesite el proyecto.",
-    services: ["Envasado", "Packaging", "Ensamblado", "Acondicionamiento", "Procesos manuales"],
+    lead: "Experiencia productiva con el respaldo de una empresa tecnológica.",
+    body: "XCAIL Industrial nace como una nueva unidad de XCAIL Technologies S.A.S. para ampliar nuestra actividad hacia operaciones productivas, ensamblado y fabricación física.",
+    body2: "Esta combinación nos permite abordar proyectos con una visión que integra producción, organización de procesos y tecnología, incorporando progresivamente herramientas de control, electrónica y automatización cuando el proyecto lo requiera.",
+    digital_title: "Del desarrollo digital al producto físico",
+    digital_body: "La expansión industrial también acompañará progresivamente el desarrollo y ensamblado de productos físicos propios de XCAIL Technologies, incluyendo dispositivos electrónicos y tecnologías de apoyo vinculadas a nuestro ecosistema de innovación.",
+    flow: ["Desarrollo", "Electrónica", "Ensamblado", "Producto"],
   },
 
   company: {
@@ -114,6 +123,7 @@ const es = {
     body: [
       "XCAIL Industrial es la unidad de operaciones industriales de XCAIL Technologies S.A.S., creada para desarrollar servicios productivos para terceros y acompañar progresivamente la fabricación de productos tecnológicos propios.",
       "Combinamos experiencia operativa, capacidad de gestión y tecnología para construir procesos adaptados a las necesidades de cada proyecto.",
+      "Nacemos con un modelo flexible: cada oportunidad se analiza según sus requerimientos de producción, volumen, infraestructura y logística para configurar la operación adecuada a cada proyecto.",
     ],
     cta: "Conocer XCAIL Technologies",
     cta_url: "https://xcail.com",
@@ -138,10 +148,14 @@ const es = {
       email_ph: "tu@correo.com",
       phone: "Teléfono",
       phone_ph: "Con código de área (opcional)",
+      location: "Localidad / zona",
+      location_ph: "Ciudad, provincia o región",
       service: "Servicio requerido",
       service_ph: "Seleccioná una opción",
       volume: "Volumen estimado",
-      volume_ph: "Seleccioná un rango",
+      volume_ph: "Ej.: 15.000 unidades mensuales",
+      frequency: "Frecuencia estimada",
+      frequency_ph: "Seleccioná una opción",
       message: "Descripción del proceso",
       message_ph: "Contanos qué proceso necesitás tercerizar: producto, materiales, pasos, controles de calidad, plazos…",
     },
@@ -154,13 +168,7 @@ const es = {
       "Etiquetado",
       "Otro proceso",
     ],
-    volumes: [
-      "A definir",
-      "Hasta 1.000 unidades",
-      "1.000 – 10.000",
-      "10.000 – 50.000",
-      "Más de 50.000",
-    ],
+    frequencies: ["Única", "Semanal", "Mensual", "Recurrente", "A definir"],
     submit: "Solicitar evaluación",
     sending: "Enviando…",
     success: "Recibimos tu solicitud. Nos comunicamos a la brevedad.",
@@ -193,7 +201,7 @@ const es = {
       {
         question: "¿Qué procesos puede tercerizar una empresa con XCAIL Industrial?",
         answer:
-          "Envasado, packaging, acondicionamiento, etiquetado, ensamblado, armado, preparación de kits, terminaciones y otras operaciones manuales o semiautomáticas. Cada proceso se evalúa según volumen, materiales, logística y requerimientos de calidad.",
+          "Envasado, packaging, acondicionamiento, etiquetado, ensamblado, armado, preparación de kits, terminaciones y otros procesos manuales. Cada proceso se evalúa según volumen, materiales, logística y requerimientos de calidad.",
       },
       {
         question: "¿Cómo empieza un proyecto?",
@@ -203,7 +211,7 @@ const es = {
       {
         question: "¿XCAIL Industrial también fabrica productos propios?",
         answer:
-          "Es una línea de trabajo a futuro. XCAIL Technologies desarrolla productos —como INCLUXIA Connect— que eventualmente requerirán fabricación y ensamblado de hardware, y esa producción se canalizará a través de XCAIL Industrial.",
+          "Es una línea de trabajo progresiva. XCAIL Technologies desarrolla productos de su ecosistema de innovación —dispositivos electrónicos y tecnologías de apoyo— cuyo desarrollo y ensamblado físico se irá canalizando a través de XCAIL Industrial.",
       },
       {
         question: "¿Dónde está XCAIL Industrial?",

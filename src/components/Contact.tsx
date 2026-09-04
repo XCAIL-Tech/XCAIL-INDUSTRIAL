@@ -12,8 +12,10 @@ const INITIAL = {
   role: "",
   email: "",
   phone: "",
+  location: "",
   service: "",
   volume: "",
+  frequency: "",
   message: "",
 };
 
@@ -105,12 +107,20 @@ export function Contact() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div className="space-y-1.5">
                   <label htmlFor="phone" className={labelClass}>{f.phone}</label>
                   <input id="phone" name="phone" value={data.phone} onChange={onChange}
                     disabled={status === "sending"} placeholder={f.phone_ph} className={fieldClass} />
                 </div>
+                <div className="space-y-1.5">
+                  <label htmlFor="location" className={labelClass}>{f.location}</label>
+                  <input id="location" name="location" value={data.location} onChange={onChange}
+                    disabled={status === "sending"} placeholder={f.location_ph} className={fieldClass} />
+                </div>
+              </div>
+
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
                 <div className="space-y-1.5">
                   <label htmlFor="service" className={labelClass}>{f.service}</label>
                   <select id="service" name="service" value={data.service} onChange={onChange}
@@ -121,10 +131,15 @@ export function Contact() {
                 </div>
                 <div className="space-y-1.5">
                   <label htmlFor="volume" className={labelClass}>{f.volume}</label>
-                  <select id="volume" name="volume" value={data.volume} onChange={onChange}
+                  <input id="volume" name="volume" value={data.volume} onChange={onChange}
+                    disabled={status === "sending"} placeholder={f.volume_ph} className={fieldClass} />
+                </div>
+                <div className="space-y-1.5">
+                  <label htmlFor="frequency" className={labelClass}>{f.frequency}</label>
+                  <select id="frequency" name="frequency" value={data.frequency} onChange={onChange}
                     disabled={status === "sending"} className={`${fieldClass} appearance-none`}>
-                    <option value="">{f.volume_ph}</option>
-                    {c.volumes.map((v) => <option key={v} value={v}>{v}</option>)}
+                    <option value="">{f.frequency_ph}</option>
+                    {c.frequencies.map((v) => <option key={v} value={v}>{v}</option>)}
                   </select>
                 </div>
               </div>

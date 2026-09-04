@@ -1,3 +1,4 @@
+import { ChevronRight } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 
 export function IndustryTech() {
@@ -17,17 +18,26 @@ export function IndustryTech() {
               {it.lead}
             </h2>
             <p className="mt-5 text-sm leading-relaxed text-white/65 sm:text-base">{it.body}</p>
+            <p className="mt-4 text-sm leading-relaxed text-white/65 sm:text-base">{it.body2}</p>
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-2">
-            {it.services.map((s) => (
-              <span
-                key={s}
-                className="rounded-sm border border-white/12 bg-white/[0.03] px-3 py-1.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] text-white/60"
-              >
-                {s}
-              </span>
-            ))}
+          {/* Del desarrollo digital al producto físico */}
+          <div className="mt-10 rounded-md border border-white/10 bg-white/[0.03] p-6 sm:p-8">
+            <h3 className="font-display text-lg font-semibold text-white">{it.digital_title}</h3>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/55">{it.digital_body}</p>
+
+            <div className="mt-6 flex flex-wrap items-center gap-x-1 gap-y-2">
+              {it.flow.map((step, i) => (
+                <span key={step} className="flex items-center">
+                  <span className="rounded-sm border border-white/12 bg-white/[0.04] px-3 py-1.5 font-mono text-[0.7rem] uppercase tracking-[0.1em] text-white/70">
+                    {step}
+                  </span>
+                  {i < it.flow.length - 1 && (
+                    <ChevronRight className="mx-0.5 h-3.5 w-3.5 shrink-0 text-secondary" />
+                  )}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

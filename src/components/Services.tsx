@@ -36,6 +36,18 @@ export function Services() {
                   <h3 className="font-display text-lg font-semibold text-foreground">{item.title}</h3>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
                 </div>
+                {item.tags.length > 0 && (
+                  <div className="mt-auto flex flex-wrap gap-1.5 pt-1">
+                    {item.tags.map((t) => (
+                      <span
+                        key={t}
+                        className="rounded-sm border border-border bg-muted/50 px-2 py-1 font-mono text-[0.62rem] uppercase tracking-[0.08em] text-muted-foreground"
+                      >
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
             );
           })}

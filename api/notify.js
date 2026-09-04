@@ -52,7 +52,10 @@ export default async function handler(req, res) {
   }
 
   try {
-    const { company, name, role, email, phone, service, volume, message } = req.body || {};
+    const {
+      company, name, role, email, phone, location,
+      service, volume, frequency, message,
+    } = req.body || {};
 
     if (!company || !name || !email || !message) {
       res.status(400).json({ ok: false, error: "incomplete_fields" });
@@ -76,8 +79,10 @@ export default async function handler(req, res) {
             ${row("Cargo", role)}
             ${row("Email", email)}
             ${row("Teléfono", phone)}
+            ${row("Localidad / zona", location)}
             ${row("Servicio requerido", service)}
             ${row("Volumen estimado", volume)}
+            ${row("Frecuencia estimada", frequency)}
           </table>
 
           <div style="background:#1a1a1a;border:1px solid #2a2a2a;border-radius:8px;padding:16px;">

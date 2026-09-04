@@ -22,6 +22,9 @@ export function OutsourcingCta() {
             <p className="mt-5 max-w-2xl text-sm leading-relaxed text-white/65 sm:text-base">
               {o.body}
             </p>
+            <p className="mt-3 max-w-2xl text-sm leading-relaxed text-white/40">
+              {o.body2}
+            </p>
             <button
               onClick={() => goToSection("contacto")}
               className="btn-primary mt-8 inline-flex items-center gap-2 rounded-md px-6 py-3.5 text-sm font-semibold"
